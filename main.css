@@ -32,15 +32,12 @@ h2 {
 }
 
 /*MAIN BODY*/
-
 /*SUBTITLE HEADERs*/
 h3 {
   font-size: 36px;
 }
 
-.col-md-12 {
-  background-color: var(--primary-background);
-}
+.col-md-12 {background-color: var(--primary-background);}
 
 .main-page {
   color: var(--main-text-color);
@@ -54,20 +51,14 @@ h3 {
   height: auto;
 }
 
-.col-md-3 {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+.outerpadding {padding: 5% 0;}
+.innerpadding {padding: 40% 0;}
 
-  display: block;
-}
+/*ART SECCTION*/
+.aesthetic-title {text-align: right;}
 
-.aesthetic-title {
-  text-align: right;
-}
-.aesthetic-bold {
-  font-weight: bold;
-}
+.aesthetic-body {text-align: justify;}
 
-.aesthetic-italic {
-  font-style: italic;
-}
+.aesthetic-bold {font-weight: bold;}
+
+.aesthetic-italic {font-style: italic;}
