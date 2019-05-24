@@ -10,6 +10,11 @@
   --primary-background: #F1F1F2;
 }
 
+/*ROW GLOBAL*/
+.row {
+  background-color: var(--primary-background);
+}
+
 /*TITLE HEADERS*/
 h1 {
   font-family: var(--title-font);
@@ -34,11 +39,7 @@ h2 {
 /*MAIN BODY*/
 /*SUBTITLE HEADERs*/
 h3 {
-  font-size: 2vw;
-}
-
-.col-md-12 {
-  background-color: var(--primary-background);
+  font-size: 36px;
 }
 
 .main-page {
@@ -54,7 +55,6 @@ h3 {
 }
 
 /*PADDING (designed to middle align text)*/
-
 .outerpadding {
   padding: 5% 0;
 }
@@ -64,14 +64,13 @@ h3 {
 }
 
 /*BODY*/
-
 .body-title {
   text-align: right;
 }
 
 .body-body {
   text-align: justify;
-  font-size: 1.25vw;
+  font-size: 22px;
 }
 
 .body-bold {
