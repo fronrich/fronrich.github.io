@@ -10,8 +10,7 @@
   --primary-background: #F1F1F2;
 }
 
-/*ROW GLOBAL*/
-.row {
+.site {
   background-color: var(--primary-background);
 }
 
@@ -30,7 +29,7 @@ h2 {
 }
 
 /*TITLE*/
-.site-header {
+.page-header {
   color: var(--main-text-color);
   text-align: center;
   text-rendering: optimizeLegibility;
