@@ -34,10 +34,12 @@ h2 {
 /*MAIN BODY*/
 /*SUBTITLE HEADERs*/
 h3 {
-  font-size: 36px;
+  font-size: 2vw;
 }
 
-.col-md-12 {background-color: var(--primary-background);}
+.col-md-12 {
+  background-color: var(--primary-background);
+}
 
 .main-page {
   color: var(--main-text-color);
@@ -51,14 +53,31 @@ h3 {
   height: auto;
 }
 
-.outerpadding {padding: 5% 0;}
-.innerpadding {padding: 40% 0;}
+/*PADDING (designed to middle align text)*/
 
-/*ART SECCTION*/
-.aesthetic-title {text-align: right;}
+.outerpadding {
+  padding: 5% 0;
+}
 
-.aesthetic-body {text-align: justify;}
+.innerpadding {
+  padding: 40% 0;
+}
 
-.aesthetic-bold {font-weight: bold;}
+/*BODY*/
 
-.aesthetic-italic {font-style: italic;}
+.body-title {
+  text-align: right;
+}
+
+.body-body {
+  text-align: justify;
+  font-size: 1.25vw;
+}
+
+.body-bold {
+  font-weight: bold;
+}
+
+.body-italic {
+  font-style: italic;
+}
