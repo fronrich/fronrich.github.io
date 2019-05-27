@@ -51,6 +51,7 @@ h2 {
 
 .text {
   width: 32vw;
+
 }
 
 /*prevent alpha collisions*/
@@ -59,7 +60,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 6vh;
 }
 
 .main-page {
@@ -73,15 +74,6 @@ h3 {
   height: auto;
 }
 
-/*PADDING (designed to middle align text)*/
-.outerpadding {
-  padding: 5% 0;
-}
-
-.innerpadding {
-  padding: 40% 0;
-}
-
 /*BODY*/
 .body-title {
   text-align: right;
@@ -89,7 +81,7 @@ h3 {
 
 .body-body {
   text-align: justify;
-  font-size: 22px;
+  font-size: 3vh;
 }
 
 .body-bold {
@@ -98,4 +90,14 @@ h3 {
 
 .body-italic {
   font-style: italic;
+}
+
+/*FOOTER*/
+
+.footer {
+  font-size: 11px;
+  font-family: var(--header-font);
+  text-align: center;
+  vertical-align: bottom;
+  margin-top: 5vw;
 }
