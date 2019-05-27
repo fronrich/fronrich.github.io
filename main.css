@@ -49,13 +49,13 @@ h2 {
   width: 16vw;
 }
 
+.text {
+  width: 32vw;
+}
+
 /*prevent alpha collisions*/
 .carousel-item {
   background-color: var(--primary-background);
-}
-
-.text {
-  width: 32vw;
 }
 
 h3 {
