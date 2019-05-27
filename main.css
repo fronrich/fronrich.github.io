@@ -18,14 +18,14 @@
 h1 {
   font-family: var(--title-font);
   font-weight: 200;
-  font-size: 96px;
+  font-size: 12vh;
 }
 
 h2 {
   font-family: var(--subtitle-font);
   font-weight: 50;
-  font-size: 24px;
-  margin-bottom: 25px;
+  font-size: 3vh;
+  margin-bottom: 3vh;
 }
 
 /*TITLE*/
