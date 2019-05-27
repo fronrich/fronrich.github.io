@@ -29,14 +29,35 @@ h2 {
 }
 
 /*TITLE*/
-.page-header {
+.site-header {
   color: var(--main-text-color);
   text-align: center;
   text-rendering: optimizeLegibility;
 }
 
-/*MAIN BODY*/
-/*SUBTITLE HEADERs*/
+/*MAIN BODY (carousel)*/
+
+
+
+/*slide sizing and alignment*/
+.carousel-inner {
+  align-items: center;
+  padding-left: 25%;
+}
+
+.vector-graphic {
+  width: 16vw;
+}
+
+/*prevent alpha collisions*/
+.carousel-item {
+  background-color: var(--primary-background);
+}
+
+.text {
+  width: 32vw;
+}
+
 h3 {
   font-size: 36px;
 }
@@ -44,7 +65,6 @@ h3 {
 .main-page {
   color: var(--main-text-color);
   font-family: var(--header-font);
-  background-color: var(--primary-background);
 }
 
 .img-responsive {
