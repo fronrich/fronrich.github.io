@@ -35,6 +35,14 @@ h2 {
   text-rendering: optimizeLegibility;
 }
 
+li {
+  list-style-type: none;
+}
+
+.link-indicators {
+  display: inline;
+}
+
 /*MAIN BODY (carousel)*/
 
 
@@ -61,6 +69,18 @@ h2 {
 
 h3 {
   font-size: 6vh;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    border-color: transparent transparent black transparent;
+    align-items: center;
+}
+
+.carousel-control-prev-icon {
+  color: var(--main-text-color);
 }
 
 .main-page {
