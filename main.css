@@ -13,18 +13,19 @@
   /* color of text */
   /* deep blue */
   /* color: rgb(16, 0, 36); */
-  /* pink */
-  color: rgb(255, 0, 114);
+
 }
 
-#background {
+#graphic {
   position: fixed;
   top: 0;
-  left: 75%;
+  left: 25%;
   width: 25%;
   height: 100%;
   /* deep blue */
-  background-color: white;
+  background-image: image(vectors/roseFronrich.svg);
+  width: 50%;
+  height: 50%;
 
 }
 
@@ -42,6 +43,8 @@
   text-align: left;
   font-size: 144px;
   margin: 25px;
+  /* pink */
+  color: rgb(255, 0, 114);
 }
 
 .sub {
