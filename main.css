@@ -1,28 +1,31 @@
 /*GLOBAL*/
 :root {
   text-rendering: optimizeSpeed;
-  --primary-background: rgb(246, 194, 255);
+  /* --primary-background: rgb(246, 194, 255); */
+  --pale-yellow: rgb(255, 224, 128);
+  --dark-blue: rgb(16, 0, 36);
+  --hot-pink: rgb(255, 0, 114);
 }
 
 body {
-  /* color of site */
-  /* orange */
-  /* background-color: rgb(255, 114, 0); */
-  /* yellow */
-  background-color: rgb(255, 224, 128);
-  /* color of text */
-  /* deep blue */
-  /* color: rgb(16, 0, 36); */
-  overflow: hidden;
+  background-color: var(--pale-yellow);
+  overflow-x: hidden;
 }
 
+/* PRIMARY SECTIONS */
+
 #menu-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 5vh;
-  background-color: rgb(16, 0, 36);
+  height: 2.5vw;
+  background-color: var(--dark-blue);
+  color: var(--pale-yellow);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75vw;
+  vertical-align: middle;
+  align: justify;
 }
 
 #graphic {
@@ -31,35 +34,55 @@ body {
   left: 60%;
   width: 40%;
   height: 100%;
+
 }
+
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 2.5%;
+  width: 100%;
+  height: 5vh;
+  color: var(--hot-pink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+}
+
+/* SUBSECTIONS */
 
 .top-border {
   width: 875px;
   height: 50px;
   /* uncomment to make green */
   /* background: rgb(172, 255, 0); */
-  background-color: rgb(16, 0, 36);
+  background-color: var(--dark-blue);
   margin: 35px;
 }
 
 .name {
   /* pink */
-  color: rgb(255, 0, 114);
+  color: var(--hot-pink);
   font-family: 'Archivo Black', sans-serif;
   text-align: left;
   font-size: 8vw;
   margin: 25px;
+  animation-name: fade-in;
+  animation-duration: 3s;
 }
 
 .sub {
-  color: rgb(16, 0, 36);
+  color: var(--dark-blue);
   font-family: 'Montserrat Subrayada', sans-serif;
   text-align: left;
   font-size: 3vw;
   margin: 25px;
+  margin-top: 1%;
 }
 
-.menu {
-  font-family: 'Montserrat', sans-serif;
-  margin: 25px;
+/* ANIMATIONS */
+
+/* The animation code */
+@keyframes fade-in {
+  from {color: var(--pale-yellow);}
+  to {color: var(--hot-pink);}
 }
