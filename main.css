@@ -54,9 +54,13 @@
   } .button-main {
     border-left-color: var(--pale-yellow);
     font-weight: bold;
-  } .big-title {
+  } .title-big {
     font-family: var(--font-title);
     font-size: 8vw;
+    color: var(--pale-yellow);
+  } .title-med {
+    font-family: var(--font-text);
+    font-size: 5vw;
     color: var(--pale-yellow);
   }
   /* SITE ELEMENTS */
@@ -92,9 +96,11 @@
     margin-top: -60%;
   }
   /*INFO*/
-  #info {
+  #info-grid {
     grid-template-areas:
       'header header header'
+      'text text image'
+      'text text image'
       'text text image'
       'text text image'
       'text text image'
@@ -105,8 +111,8 @@
   }
 
   #header {
+    align-items: center;
     grid-area: header;
-    background-color: red;
   }
   #text {
     grid-area: text;
