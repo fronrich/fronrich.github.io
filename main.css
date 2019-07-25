@@ -18,6 +18,9 @@
   background: var(--pale-yellow);
 } body {
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (orientation: landscape) {
@@ -31,6 +34,8 @@
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
   } .wide {
     width: 100%;
+  } .snug {
+    width: 75%;
   } .button {
     display: flex;
     justify-content: center;
@@ -64,14 +69,6 @@
     justify-content: center;
   }
 
-  #menu-items {
-    width: 75%;
-  }
-
-  #current-page-button {
-
-  }
-
   #intro {
     height: auto;
     flex-direction: column;
@@ -79,7 +76,7 @@
   }
 
   #intro #image {
-    width: 75%;
+    width: 100%;
     height: auto;
   }
 
@@ -88,9 +85,9 @@
   }
 
   #intro #mask {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin-top: -45%;
+    margin-top: -60%;
   }
 
 
