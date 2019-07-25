@@ -1,4 +1,8 @@
 /*GLOBAL*/
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Archivo+Black|Raleway|Sacramento&display=swap');
+
 :root {
   text-rendering: optimizeSpeed;
   /* theme */
@@ -6,10 +10,13 @@
   --crimson: rgb(220, 20, 60);
   --hot-pink: rgb(255, 0, 114);
   /* fontwork */
-  --font-title: 'Limelight', cursive;
-  --font-sub-title: 'IM Fell French Canon SC', serif;
+  --font-title: 'Archivo Black', sans-serif;
+  --font-sub-title: 'Sacramento', cursive;
   --font-menu: 'Alegreya Sans SC', sans-serif;
-  --font-text: 'Libre Baskerville', serif;
+  --font-text: 'Raleway', sans-serif;
+  /* default section sizes */
+  --wide: 100%;
+  --snug: 75%;
 } html {
   scroll-behavior: smooth;
 } ::-webkit-scrollbar {
@@ -22,6 +29,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+} a {
+  font: inherit;
+  color: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
 }
 
 @media (orientation: landscape) {
@@ -36,9 +48,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
   } .wide {
-    width: 100%;
+    width: var(--wide);
   } .snug {
-    width: 75%;
+    width: var(--snug);
   } .button {
     display: flex;
     justify-content: center;
@@ -49,9 +61,8 @@
     text-align: center;
     border-right-color: var(--pale-yellow);
   } .button:hover {
-    font-weight: bold;
     color: black;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.9);
     animation-name: background-fade-in;
     animation-duration: .25s;
   } .button-main {
@@ -59,7 +70,7 @@
     font-weight: bold;
   } .title-big {
     font-family: var(--font-title);
-    font-size: 8vw;
+    font-size: 7vw;
     color: var(--pale-yellow);
   } .title-med {
     font-family: var(--font-sub-title);
@@ -67,11 +78,13 @@
     color: var(--pale-yellow);
   } .text-box {
     font-family: var(--font-text);
-    font-size: 24px;;
+    font-size: 22px;
     color: var(--pale-yellow);
     text-overflow: ellipsis;
   }
   /* SITE ELEMENTS */
+
+  /* menu */
   #menu {
     top: 0px;
     left: 0px;
@@ -87,7 +100,7 @@
     height: auto;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-bottom: 95px;
   }
 
   #intro #image {
@@ -113,8 +126,7 @@
     grid-template-areas:
       'header header header'
       'text text image'
-      'text text image'
-      'text text caption';
+      'text text image';
       grid-gap: 10px;
       padding: 10px;
     height: 700px;
@@ -126,6 +138,7 @@
   }
   #gird-info #cell-text {
     grid-area: text;
+    text-align: justify;
   }
   #grid-info #cell-image {
     grid-area: image;
@@ -148,7 +161,7 @@
   }
 
   to {
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.9);
   }
 }
 
