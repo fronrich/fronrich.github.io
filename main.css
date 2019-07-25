@@ -9,14 +9,13 @@
   --font-title: 'Limelight', cursive;
   --font-menu: 'Alegreya Sans SC', sans-serif;
   --font-text: 'Nunito', sans-serif;
+} html {
+  scroll-behavior: smooth;
 } ::-webkit-scrollbar {
   display: content;
   width: 5px;
 } ::-webkit-scrollbar-thumb {
   background: var(--pale-yellow);
-}
-html {
-  scroll-behavior: smooth;
 } body {
   background-color: black;
 }
@@ -29,7 +28,7 @@ html {
     display: flex;
   } .chain-horizontal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
   } .wide {
     width: 100%;
   } .button {
@@ -50,7 +49,7 @@ html {
     font-weight: bold;
   } .big-title {
     font-family: var(--font-title);
-    font-size: 96px;
+    font-size: 8vw;
     color: var(--pale-yellow);
   }
   /* SITE ELEMENTS */
@@ -79,13 +78,19 @@ html {
     align-items: center;
   }
 
-  #intro-image {
-    width: 100%;
+  #intro #image {
+    width: 75%;
     height: auto;
   }
 
-  #name {
-    position:
+  #intro #name {
+    margin-top: -9.5%;
+  }
+
+  #intro #mask {
+    width: 90%;
+    height: auto;
+    margin-top: -45%;
   }
 
 
