@@ -3,7 +3,7 @@
   text-rendering: optimizeSpeed;
   /* theme */
   --pale-yellow: rgb(255, 224, 128);
-  --dark-blue: rgb(16, 0, 36);
+  --crimson: rgb(220, 20, 60);
   --hot-pink: rgb(255, 0, 114);
   /* fontwork */
   --font-title: 'Limelight', cursive;
@@ -87,6 +87,7 @@
     height: auto;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
 
   #intro #image {
