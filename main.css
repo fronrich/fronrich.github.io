@@ -231,6 +231,12 @@ p {
     width: 100%;
     height: auto;
   }
+
+  #gallery-interactive-header {
+    grid-template-areas:
+      'header'
+      'text';
+  }
 }
 
 /* ANIMATIONS */
