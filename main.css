@@ -105,11 +105,19 @@ a {
     font-family: var(--font-sub-title);
     font-size: 5vw;
   }
-
+  .text-menu {
+    font-family: var(--font-menu);
+  }
   .text-box {
     font-family: var(--font-text);
     font-size: 20px;
     text-overflow: ellipsis;
+  }
+  .text-gold {
+    color: var(--pale-yellow);
+  }
+  .self-gold {
+    background-color: var(--pale-yellow);
   }
   /* SITE SECTIONS */
   /* menu */
@@ -117,9 +125,6 @@ a {
     top: 0px;
     left: 0px;
     height: 42px;
-    /* background-color: var(--dark-blue); */
-    color: var(--pale-yellow);
-    font-family: var(--font-menu);
     font-weight: lighter;
     font-size: 24px;
     justify-content: center;
@@ -154,8 +159,6 @@ a {
     height: auto;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20vh;
-    color: var(--pale-yellow);
   }
 
   #home-image {
