@@ -33,9 +33,6 @@ html {
 
 body {
   background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 a {
@@ -112,8 +109,7 @@ a {
     font-size: 20px;
     text-overflow: ellipsis;
   }
-
-  /* SITE ELEMENTS */
+  /* SITE SECTIONS */
   /* menu */
   #menu {
     top: 0px;
@@ -126,6 +122,24 @@ a {
     font-size: 24px;
     justify-content: center;
   }
+
+  #page-body {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #page-left {
+    flex-basis: auto;
+  }
+  #page-center {
+    flex-basis: var(--snug);
+    flex-direction: column;
+    justify-content: center;
+  }
+  #page-right {
+    flex-basis: auto;
+  }
+
+  /* SITE ELEMENTS */
 
   /* texture mask */
   #mask {
@@ -162,18 +176,12 @@ a {
     grid-template-areas:
       'image header header'
       'image text text';
-    grid-gap: 10px;
-    padding: 10px;
-    height: 700px;
   }
 
   #grid-statement {
     grid-template-areas:
       'header image image'
       'text text text';
-    grid-gap: 10px;
-    padding: 10px;
-    height: 700px;
   }
 
   #cell-header {

@@ -19,7 +19,8 @@
 </head>
 
 <body class="site">
-
+  <!-- Page is partitoned into main sections menu, page-body (page-left, page-center, page-right) and footer -->
+  <!-- subsections are partitions of these sections -->
   <div id="menu" class="wide fixed flex">
     <div id="menu-items" class="chain-horizontal snug">
       <!-- Displays name of current page -->
@@ -38,68 +39,81 @@
     </div>
   </div>
   <img id="mask" class="wide fixed" src="assets/png-images/mask-distress.png">
-  <section id="home" class="flex snug">
-    <img id="home-image" src="assets/png-images/cello-dark.png">
-    <span id="home-name" class="title-big">ART•MUSIC•CODE</span>
-  </section>
+  <section id="page-body" class="flex">
+    <section id="page-left">
 
-  <section id="info" class="flex wide">
-    <section id="grid-about-me" class="grid snug">
-      <!-- BIO -->
-      <div id="cell-header" class="grid-cell flex title-med">
-        <span style="">A Bit About Me</span>
-      </div>
-      <div id="cell-text" class="grid-cell text-box">
-        <p>
-          My name is Fronrich Puno. I am a second-year student at The University
-          of Texas at Austin working on a Bachelors of Science and Art in
-          Computer Science and Philosophy of Law. I am well versed in Java,
-          HTML5, HTML, and CSS. I am proficient in C++ and Lua and am in the
-          process of learning Javascript and Python. I have studied the works
-          of philosophers such as Socrates, Anselm, Hume, Kant, and Hitchens to
-          name a few.
-        </p>
-        <p>
-          Beyond my academia, I am a cellist of eight years, a
-          musical producer, and a poet. I am a self-taught graphic design
-          artist with specialization in vector graphics and image
-          manipulation. I rock climb and even had the opportunity to help
-          mentor a climbing class this past summer at St. Mary’s University.
-          Tatsuya Ramen on South Lamar is my go-to for post-midterm dinners,
-          but I have a pretty open pallet and love trying new food.
-        </p>
-      </div>
-      <div id="cell-image" class="grid-cell flex">
-        <div id="image-container-fronrich-cut">
-          <img id="image" src="assets/png-images/fronrich-cut.png" alt="">
-        </div>
-      </div>
     </section>
-    <!-- STATEMENT -->
-    <section id="grid-statement" class="grid snug">
-      <div id="cell-header" class="grid-cell flex title-med">
-        <span>Personal Statement</span>
-      </div>
-      <div id="cell-text" class="grid-cell text-box">
-        <p>
-          I believe that regardless of whether we are the product of a conscious
-          endeavor by a higher power or the result of a chain of incidental
-          processes, we are ultimately the means by which the universe is able
-          to admire itself. Because of this, I believe that a fulfilled
-          existence involves finding ways to love your life, helping others
-          learn to love their own lives, and improving the quality of life for
-          all things living. I strive to use technology as a means to these
-          ends.
-        </p>
-      </div>
-      <div id="cell-image" class="grid-cell flex">
-        <div id="image-container-lucid-cherry-blossom">
-          <img id="image" src="assets/png-images/lucid-cherry-blossom.png" alt="">
+    <section id="page-center" class="flex">
+      <!-- HOME -->
+      <section id="home" class="flex wide">
+        <img id="home-image" src="assets/png-images/cello-dark.png">
+        <span id="home-name" class="title-big">ART•MUSIC•CODE</span>
+      </section>
+      <!-- INFO -->
+      <section id="info" class="grid wide">
+        <div id="info-title" class="title-big">
+          <span>INTRODUCTION</span>
         </div>
-      </div>
+        <section id="grid-about-me" class="grid wide">
+          <!-- BIO -->
+          <div id="cell-header" class="grid-cell flex title-med">
+            <span style="">A Bit About Me</span>
+          </div>
+          <div id="cell-text" class="grid-cell text-box">
+            <p>
+              My name is Fronrich Puno. I am a second-year student at The University
+              of Texas at Austin working on a Bachelors of Science and Art in
+              Computer Science and Philosophy of Law. I am well versed in Java,
+              HTML5, HTML, and CSS. I am proficient in C++ and Lua and am in the
+              process of learning Javascript and Python. I have studied the works
+              of philosophers such as Socrates, Anselm, Hume, Kant, and Hitchens to
+              name a few.
+            </p>
+            <p>
+              Beyond my academia, I am a cellist of eight years, a
+              musical producer, and a poet. I am a self-taught graphic design
+              artist with specialization in vector graphics and image
+              manipulation. I rock climb and even had the opportunity to help
+              mentor a climbing class this past summer at St. Mary’s University.
+              Tatsuya Ramen on South Lamar is my go-to for post-midterm dinners,
+              but I have a pretty open pallet and love trying new food.
+            </p>
+          </div>
+          <div id="cell-image" class="grid-cell flex">
+            <div id="image-container-fronrich-cut">
+              <img id="image" src="assets/png-images/fronrich-cut.png" alt="">
+            </div>
+          </div>
+        </section>
+        <!-- STATEMENT -->
+        <section id="grid-statement" class="grid wide">
+          <div id="cell-header" class="grid-cell flex title-med">
+            <span>Personal Statement</span>
+          </div>
+          <div id="cell-text" class="grid-cell text-box">
+            <p>
+              I believe that regardless of whether we are the product of a conscious
+              endeavor by a higher power or the result of a chain of incidental
+              processes, we are ultimately the means by which the universe is able
+              to admire itself. Because of this, I believe that a fulfilled
+              existence involves finding ways to love your life, helping others
+              learn to love their own lives, and improving the quality of life for
+              all things living. I strive to use technology as a means to these
+              ends.
+            </p>
+          </div>
+          <div id="cell-image" class="grid-cell flex">
+            <div id="image-container-lucid-cherry-blossom">
+              <img id="image" src="assets/png-images/lucid-cherry-blossom.png" alt="">
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section id="page-right">
+
     </section>
   </section>
-
 </body>
 
 </html>
