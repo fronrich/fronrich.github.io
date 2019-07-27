@@ -17,6 +17,8 @@
   --wide: 100%;
   --snug: 75%;
   --border: 12.5%;
+  /* defualt font color */
+  color: white;
 }
 
 html {
@@ -42,6 +44,10 @@ a {
   color: inherit;
   font-style: inherit;
   text-decoration: inherit;
+}
+
+p {
+  text-indent: 4ch;
 }
 
 @media (orientation: landscape) {
@@ -72,6 +78,10 @@ a {
     width: var(--snug);
   }
 
+  .vertically-spaced {
+    padding-top: 10vh;
+  }
+
   .button {
     display: flex;
     justify-content: center;
@@ -86,7 +96,7 @@ a {
   .button:hover {
     color: black;
     font-weight: normal;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .8);
     animation-name: background-fade-in;
     animation-duration: .25s;
   }
@@ -171,11 +181,10 @@ a {
     margin-top: -9.5%;
   }
 
-  /*BIO*/
+  /*INFO*/
   #info {
     flex-direction: column;
     align-items: center;
-    color: white;
   }
 
   #grid-about-me {
@@ -186,7 +195,7 @@ a {
 
   #grid-statement {
     grid-template-areas:
-      'header image image'
+      'header header image'
       'text text text';
   }
 
@@ -212,8 +221,9 @@ a {
   }
 
   #image-container-lucid-cherry-blossom {
-    width: 35vw;
+    width: 30vw;
     height: auto;
+    align-self: flex-end;
   }
 
   #image {
@@ -231,7 +241,7 @@ a {
   }
 
   to {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .8);
   }
 }
 
