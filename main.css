@@ -99,6 +99,7 @@ a {
   .title-big {
     font-family: var(--font-title);
     font-size: 7vw;
+    text-align: center;
   }
 
   .title-med {
