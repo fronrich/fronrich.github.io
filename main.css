@@ -63,6 +63,7 @@ p {
 
   .grid {
     display: grid;
+    grid-gap: 20px;
   }
 
   .chain-horizontal {
@@ -234,8 +235,7 @@ p {
 
   #gallery-interactive-header {
     grid-template-areas:
-      'header'
-      'text';
+      'header text text';
   }
 }
 
