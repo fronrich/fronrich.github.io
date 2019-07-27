@@ -199,17 +199,17 @@ p {
       'text text text';
   }
 
-  #cell-header {
+  .cell-header {
     grid-area: header;
     align-items: flex-end;
   }
 
-  #cell-text {
+  .cell-text {
     grid-area: text;
     text-align: justify;
   }
 
-  #cell-image {
+  .cell-image {
     grid-area: image;
     flex-direction: column;
     justify-content: center;
