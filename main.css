@@ -16,6 +16,7 @@
   /* default section sizes */
   --wide: 100%;
   --snug: 75%;
+  --border: 12.5%;
 }
 
 html {
@@ -33,6 +34,7 @@ html {
 
 body {
   background-color: black;
+  margin: 0px;
 }
 
 a {
@@ -128,7 +130,7 @@ a {
     justify-content: center;
   }
   #page-left {
-    flex-basis: auto;
+    flex-basis: var(--border);
   }
   #page-center {
     flex-basis: var(--snug);
@@ -136,7 +138,7 @@ a {
     justify-content: center;
   }
   #page-right {
-    flex-basis: auto;
+    flex-basis: var(--border);
   }
 
   /* SITE ELEMENTS */
