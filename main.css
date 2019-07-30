@@ -20,7 +20,7 @@
   /* defualt font color */
   color: white;
   /* pixel size */
-  --pixel: 20;
+  --pixel: 50px;
 }
 
 html {
@@ -127,6 +127,11 @@ p {
     font-size: 20px;
     text-overflow: ellipsis;
   }
+  .caption {
+    font-family: var(--font-menu);
+    text-align: center;
+    font-size: 16px;
+  }
   .text-gold {
     color: var(--pale-yellow);
   }
@@ -216,6 +221,7 @@ p {
     grid-area: image;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
   }
 
   #image-container-fronrich-cut {
@@ -237,34 +243,39 @@ p {
 
   #gallery-interactive-header {
     grid-template-areas:
-      'header text text';
+      'header text';
   }
 
   /* HOT AND COLD */
 
   #interactive-1 {
+
     grid-template-areas:
-      'header text text'
-      'image image image';
+      'image'
+      'text';
   }
 
   #interactive-art-1-container {
-    width: 160px;
-    height: 160px;
-    background-color: white;
+    width: auto;
+    height: auto;
+    align-self: center;
   }
 
   #interactive-art-1 {
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns: repeat(8, var(--pixel));
+    grid-template-rows: repeat(8, var(--pixel));
   }
 
   .hc-cell {
     display: block;
-    width: var(--pixel);
-    height: var(--pixel);
+    transform: scale(1);
+    opacity: 0;
+    transition: .3s;
+  }
+  .hc-cell:hover {
+    transform: scale(2);
+    opacity: 1;
   }
 
   #hc-a-1 {
@@ -398,9 +409,17 @@ p {
   #hc-f-2 {
     background-color: #EC2424;
   }
+  /* MYSTERY CELL!!! */
+  /* ##################### */
   #hc-f-3 {
-    background-color: #FF0000;
+    background-image: url("assets/png-images/cold.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  #magic-cell {
+    width: 200px;
+  }
+  /* ##################### */
   #hc-f-4 {
     background-color: #EC2424;
   }
