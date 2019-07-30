@@ -271,7 +271,8 @@ p {
     display: block;
     transform: scale(1);
     opacity: 0;
-    transition: .3s;
+    transition: 300ms;
+    transition-property: opacity, transform;
   }
   .hc-cell:hover {
     transform: scale(2);
