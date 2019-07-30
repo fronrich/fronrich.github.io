@@ -94,14 +94,16 @@ p {
     border-color: transparent;
     text-align: center;
     border-right-color: var(--pale-yellow);
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .button:hover {
     color: black;
     font-weight: normal;
     background-color: rgba(255, 255, 255, .8);
-    animation-name: background-fade-in;
-    animation-duration: .25s;
+    transition: 250ms;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
   }
 
   .button-main {
@@ -113,6 +115,7 @@ p {
     font-family: var(--font-title);
     font-size: 7vw;
     text-align: center;
+    z-index: -2;
   }
 
   .title-med {
@@ -171,6 +174,7 @@ p {
   #mask {
     top: 0px;
     pointer-events: none;
+    z-index: -1;
   }
 
   /* home */
@@ -183,6 +187,7 @@ p {
   #home-image {
     width: 100%;
     height: auto;
+    z-index: -2;
   }
 
   #home-name {
@@ -271,7 +276,8 @@ p {
     display: block;
     transform: scale(1);
     opacity: 0;
-    transition: 300ms;
+    transition: 500ms;
+    transition-timing-function: cubic-bezier(0.01, 1.35, 0.96, 3);
     transition-property: opacity, transform;
   }
   .hc-cell:hover {
