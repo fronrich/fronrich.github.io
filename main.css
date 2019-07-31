@@ -20,7 +20,7 @@
   /* defualt font color */
   color: white;
   /* pixel size */
-  --pixel: 50px;
+  --pixel: 80px;
 }
 
 html {
@@ -50,6 +50,12 @@ a {
 
 p {
   text-indent: 4ch;
+}
+
+.labeled-art {
+  background-image: url("assets/png-images/art-background.png");
+  background-size: 25%;
+  background-position: 15% 15%;
 }
 
 @media (orientation: landscape) {
@@ -274,14 +280,12 @@ p {
 
   .hc-cell {
     display: block;
-    transform: scale(1);
     opacity: 0;
-    transition: 500ms;
+    transition: 5000ms;
     transition-timing-function: cubic-bezier(0.01, 1.35, 0.96, 3);
-    transition-property: opacity, transform;
+    transition-property: opacity;
   }
   .hc-cell:hover {
-    transform: scale(2);
     opacity: 1;
   }
 
