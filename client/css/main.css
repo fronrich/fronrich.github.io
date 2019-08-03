@@ -53,7 +53,7 @@ p {
 }
 
 .labeled-art {
-  background-image: url("assets/png-images/art-background.png");
+  background-image: url("../assets/png-images/art-background.png");
   background-size: 25%;
   background-position: 15% 15%;
 }
@@ -426,7 +426,7 @@ p {
   /* MYSTERY CELL!!! */
   /* ##################### */
   #hc-f-3 {
-    background-image: url("assets/png-images/cold.png");
+    background-image: url("../assets/png-images/cold.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
