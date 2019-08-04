@@ -52,6 +52,7 @@ function mutateMenu() {
     for (var i = 0; i < menuItems.length; i++) {
       // Mutate color elements
       menuItems[i].style.backgroundColor = `rgba${backgroundColor}`;
+      menuItems[i].style.transition = `250ms`;
       menuItems[i].style.color = `${textColor}`;
       menuItems[i].style.borderRightColor = `${textColor}`;
       if(menuItems[i].classList.contains("button-main")) {
