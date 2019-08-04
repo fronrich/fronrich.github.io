@@ -146,8 +146,8 @@ p {
   }
 
   .vertically-spaced {
-    margin-top: 20vh;
-    padding-top: 10vh;
+    margin-top: 10vh;
+    padding-top: 8vh;
   }
 
 
@@ -157,9 +157,9 @@ p {
     top: 0px;
     left: 0px;
     height: 42px;
-    font-weight: lighter;
     font-size: 1.5vw;
     justify-content: center;
+    z-index: 1;
   }
 
   #page-body {
@@ -208,7 +208,6 @@ p {
   #info {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20vh;
   }
 
   #grid-about-me {
