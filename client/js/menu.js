@@ -29,8 +29,10 @@ for (var i = 0; i < sectionHrefs.length; i++) {
 
 // All the main page sections
 let primaryPageSections = document.getElementById("page-center").getElementsByClassName("primary-section");
+console.log(primaryPageSections.length);
 
 function divInViewport(div) {
+  // console.log(div);
   // top position (in pixels) relative to top of offsetParent element
   let top = div.offsetTop;
   let height = div.offsetHeight;
@@ -57,6 +59,7 @@ function mutateMenu() {
       }
       // mutate font weight based on section
       if(divInViewport(primaryPageSections[i])) {
+        // primaryPageSections[i].getElementsByClassName("section-title"
         menuItems[i].style.fontWeight = `bold`;
       } else {
         menuItems[i].style.fontWeight = `lighter`;
