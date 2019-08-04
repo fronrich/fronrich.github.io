@@ -35,8 +35,9 @@ function divInViewport(div) {
   let top = div.offsetTop;
   let height = div.offsetHeight;
   // get vertical entirety of div
-  while (div = div.offsetParent)
+  while (div = div.offsetParent) {
     top += div.offsetTop;
+  }
   let maxHeight = top + height;
   // return visibility as boolean
   let isVisible = (top < (window.pageYOffset + window.innerHeight)) && (maxHeight >= window.pageYOffset);
@@ -44,16 +45,28 @@ function divInViewport(div) {
 }
 
 function mutateMenu() {
+  // allows changes to all menu items
+  function changeInnerDiv(backgroundColor, textColor) {
+    for (var i = 0; i < menuItems.length; i++) {
+      // Mutate color elements
+      menuItems[i].style.backgroundColor = `rgba${backgroundColor}`;
+      menuItems[i].style.color = `${textColor}`;
+      menuItems[i].style.borderRightColor = `${textColor}`;
+      if(menuItems[i].classList.contains("button-main")) {
+        menuItems[i].style.borderLeftColor = `${textColor}`;
+      }
+      // mutate font weight based on section
+      if(divInViewport(primaryPageSections[i])) {
+        menuItems[i].style.fontWeight = `bold`;
+      } else {
+        menuItems[i].style.fontWeight = `lighter`;
+      }
+    }
+  }
   let opactityLimit = 1;
   if (!divInViewport(primaryPageSections[0])) {
-    for (var i = 0; i < menuItems.length; i++) {
-      menuItems[i].style.backgroundColor = `rgba(255, 255, 255, 1)`;
-      menuItems[i].style.color = `black`;
-    }
+    changeInnerDiv('(255, 255, 255, .8)', 'black');
   } else {
-    for (var i = 0; i < menuItems.length; i++) {
-      menuItems[i].style.backgroundColor = "rgba(255, 255, 255, 0)";
-      menuItems[i].style.color = `rgb(255, 224, 128)`;
-    }
+    changeInnerDiv('(255, 255, 255, 0)', 'rgb(255, 224, 128)');
   }
 }
