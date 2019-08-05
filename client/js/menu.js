@@ -4,10 +4,30 @@
 console.log("menu.js is active");
 // list of menu items
 let menuItems = document.getElementById("menu-items").getElementsByClassName("button");
-// parallel arrays of ids, sections and hrefs
-let sectionIds = ["current-page-button", "info-button", "art-button", "music-button"];
-let sectionHrefs = ["home", "info", "gallery", "music"];
+// All the main page sections
+let primaryPageSections = document.getElementById("page-center").getElementsByClassName("primary-section");
+// parallel arrays of button ids, sections and hrefs
+let sectionHrefs = function(){
+  var temp = [];
+  for(var i = 0; i < primaryPageSections.length; i++) {
+    temp.push(primaryPageSections[i].id);
+  }
+  return temp;
+}();
+// Href + "button tag"
+let sectionIds = function() {
+  var temp = [];
+  for(var i = 0; i < sectionHrefs.length; i++) {
+    temp.push(sectionHrefs[i] + "-button");
+  }
+  return temp;
+}();
+// All button names
 let sectionNames = ["Home", "Introduction", "Art Gallery", "Musical Anthology"];
+// Test arrays
+console.log("sectionHrefs:\n" + sectionHrefs);
+console.log("sectionIds:\n" + sectionIds);
+console.log("sectionNames:\n" + sectionNames);
 // used to construct a button div
 let menuItemTemplate = (id, isCurrentSection, sectionHref, sectionName) => {
   let classAttributes =
@@ -26,9 +46,6 @@ for (var i = 0; i < sectionHrefs.length; i++) {
 }
 
 // Import statments do not work in browser so excuse my hygine
-
-// All the main page sections
-let primaryPageSections = document.getElementById("page-center").getElementsByClassName("primary-section");
 console.log(primaryPageSections.length);
 
 function divInViewport(div) {
@@ -45,32 +62,34 @@ function divInViewport(div) {
   let isVisible = (top < (window.pageYOffset + window.innerHeight)) && (maxHeight >= window.pageYOffset);
   return isVisible;
 }
-
+// a function which changes the appearance of the menu
+// based on visible area in page
 function mutateMenu() {
   // allows changes to all menu items
   function changeInnerDiv(backgroundColor, textColor) {
     for (var i = 0; i < menuItems.length; i++) {
       // Mutate color elements
       menuItems[i].style.backgroundColor = `rgba${backgroundColor}`;
-      menuItems[i].style.transition = `250ms`;
       menuItems[i].style.color = `${textColor}`;
       menuItems[i].style.borderRightColor = `${textColor}`;
-      if(menuItems[i].classList.contains("button-main")) {
+      if(menuItems[i].classList.contains("button-main"))
         menuItems[i].style.borderLeftColor = `${textColor}`;
-      }
       // mutate font weight based on section
-      if(divInViewport(primaryPageSections[i])) {
+      if(divInViewport(primaryPageSections[i]))
         // primaryPageSections[i].getElementsByClassName("section-title"
         menuItems[i].style.fontWeight = `bold`;
-      } else {
+      else
         menuItems[i].style.fontWeight = `lighter`;
-      }
+      // Animation
+      menuItems[i].style.transition = `350ms`;
+      menuItems[i].style.transitionProperty = `background-color fontWeight`;
+      menuItems[i].style.transitionTimingFunction = `ease-out`;
+
     }
   }
-  let opactityLimit = 1;
-  if (!divInViewport(primaryPageSections[0])) {
-    changeInnerDiv('(255, 255, 255, .8)', 'black');
-  } else {
+  let opacityLimit = .8;
+  if (!divInViewport(primaryPageSections[0]))
+    changeInnerDiv(`(255, 255, 255, ${opacityLimit})`, 'black');
+  else
     changeInnerDiv('(255, 255, 255, 0)', 'rgb(255, 224, 128)');
-  }
 }
