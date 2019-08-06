@@ -18,12 +18,20 @@ let sectionHrefs = function(){
 let sectionIds = function() {
   var temp = [];
   for(var i = 0; i < sectionHrefs.length; i++) {
-    temp.push(sectionHrefs[i] + "-button");
+    temp.push(`${sectionHrefs[i]}-button`);
   }
   return temp;
 }();
 // All button names
-let sectionNames = ["Home", "Introduction", "Art Gallery", "Musical Anthology"];
+// FIXME
+let sectionNames = function() {
+  var temp = [];
+  for(var i = 0; i < primaryPageSections.length; i++) {
+    temp.push(primaryPageSections[i].innerHTML.document.getElementById(`${sectionHrefs[i]}-title`));
+    // temp.push(primaryPageSections[i].getElementById(`${sectionHrefs[i]}-title`));
+  }
+  return temp;
+}();
 // Test arrays
 console.log("sectionHrefs:\n" + sectionHrefs);
 console.log("sectionIds:\n" + sectionIds);
@@ -40,10 +48,10 @@ let menuItemTemplate = (id, isCurrentSection, sectionHref, sectionName) => {
   return buttonDiv;
 };
 // test to see if template works
-console.log("default button positions:");
-for (var i = 0; i < sectionHrefs.length; i++) {
-  console.log(menuItemTemplate(sectionIds[i], 0, sectionHrefs[i], sectionNames[i]));
-}
+// console.log("default button positions:");
+// for (var i = 0; i < sectionHrefs.length; i++) {
+//   console.log(menuItemTemplate(sectionIds[i], 0, sectionHrefs[i], sectionNames[i]));
+// }
 
 // Import statments do not work in browser so excuse my hygine
 console.log(primaryPageSections.length);
