@@ -10,7 +10,7 @@ let primaryPageSections = document.getElementById("page-center").getElementsByCl
 let sectionHrefs = function(){
   var temp = [];
   for(var i = 0; i < primaryPageSections.length; i++) {
-    temp.push(primaryPageSections[i].id);
+    temp = [...temp, primaryPageSections[i].id];
   }
   return temp;
 }();
@@ -18,18 +18,24 @@ let sectionHrefs = function(){
 let sectionIds = function() {
   var temp = [];
   for(var i = 0; i < sectionHrefs.length; i++) {
-    temp.push(`${sectionHrefs[i]}-button`);
+    temp = [...temp, `${sectionHrefs[i]}-button`];
   }
   return temp;
 }();
 // All button names
-// FIXME
+// FIXME (NEED TO USE TITLE CASE)
 let sectionNames = function() {
   var temp = [];
-  for(var i = 0; i < primaryPageSections.length; i++) {
-    temp.push(primaryPageSections[i].innerHTML.document.getElementById(`${sectionHrefs[i]}-title`));
-    // temp.push(primaryPageSections[i].getElementById(`${sectionHrefs[i]}-title`));
+  for(var i = 0; i < sectionHrefs.length; i++) {
+    let sectionTitleRaw = document.getElementById(`${sectionHrefs[i]}-title`).getElementsByTagName('SPAN')[0].innerHTML;
+    let sectionTitleProcessed = function() {
+      return sectionTitleRaw.charAt(0) + sectionTitleRaw.slice(1).toLowerCase();
+    }();
+    console.log(sectionTitleProcessed);
+    temp = [...temp, sectionTitleProcessed];
   }
+  // special case: 0th section is always home
+  temp[0] = 'Home';
   return temp;
 }();
 // Test arrays
