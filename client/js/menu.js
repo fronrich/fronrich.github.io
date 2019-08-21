@@ -27,9 +27,13 @@ let sectionIds = function() {
 let sectionNames = function() {
   var temp = [];
   for(var i = 0; i < sectionHrefs.length; i++) {
-    let sectionTitleRaw = document.getElementById(`${sectionHrefs[i]}-title`).getElementsByTagName('SPAN')[0].innerHTML;
+    let sectionTitleRaw =
+        document.getElementById(`${sectionHrefs[i]}-title`).
+        getElementsByTagName('SPAN')[0].
+        innerHTML;
     let sectionTitleProcessed = function() {
-      return sectionTitleRaw.charAt(0) + sectionTitleRaw.slice(1).toLowerCase();
+      return sectionTitleRaw.charAt(0) +
+          sectionTitleRaw.slice(1).toLowerCase();
     }();
     console.log(sectionTitleProcessed);
     temp = [...temp, sectionTitleProcessed];
@@ -43,16 +47,21 @@ console.log("sectionHrefs:\n" + sectionHrefs);
 console.log("sectionIds:\n" + sectionIds);
 console.log("sectionNames:\n" + sectionNames);
 // used to construct a button div
-let menuItemTemplate = (id, isCurrentSection, sectionHref, sectionName) => {
-  let classAttributes =
-    isCurrentSection ? "button button-main" : "button";
+let menuItemTemplate = (id, sectionHref, sectionName) => {
   // buttonDiv to return
   let buttonDiv =
-    (`<a id="${id}" class="${classAttributes}" href="#${sectionHref}">\n` +
+    (`<a id="${id}" class="button" href="#${sectionHref}">\n` +
       `\t<span>${sectionName}</span>\n` +
       `</a>`);
   return buttonDiv;
 };
+
+// Create menu using section divs
+for(var i = 0; i < sectionNames.length; i++) {
+  document.getElementById("menu-items").innerHTML +=
+      menuItemTemplate(sectionIds[i], sectionHrefs[i], sectionNames[i]);
+
+}
 // test to see if template works
 // console.log("default button positions:");
 // for (var i = 0; i < sectionHrefs.length; i++) {
