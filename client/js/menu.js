@@ -49,11 +49,9 @@ console.log("sectionNames:\n" + sectionNames);
 // used to construct a button div
 let menuItemTemplate = (id, sectionHref, sectionName) => {
   // buttonDiv to return
-  let buttonDiv =
-    (`<a id="${id}" class="button" href="#${sectionHref}">\n` +
-      `\t<span>${sectionName}</span>\n` +
-      `</a>`);
-  return buttonDiv;
+  return (`<a id="${id}" class="button" href="#${sectionHref}">\n` +
+    `\t<span>${sectionName}</span>\n` +
+    `</a>`);;
 };
 
 // Create menu using section divs
