@@ -274,10 +274,10 @@ p {
   }
 
   .hc-cell {
-    background-color: yellow;
+    /* background-color: yellow; */
     display: block;
     opacity: 0;
-    transition: 2000ms;
+    transition: 1000ms;
     transition-timing-function: cubic-bezier(0.01, 1.35, 0.96, 3);
     transition-property: opacity;
   }
@@ -285,7 +285,7 @@ p {
     opacity: 1;
   }
 
-  #hc-a-1 {
+  #hc-1-1 {
     background-color: #7FFEFE;
   }
 
