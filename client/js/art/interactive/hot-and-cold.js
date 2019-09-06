@@ -37,6 +37,7 @@ art.style.gridTemplateRows = `repeat(${DIMENSIONS_UPPER_LIMIT},` +
 // inner for numbers 1-[10, 15]
 for (var i = 1; i <= DIMENSIONS_UPPER_LIMIT; i++) {
   // 1 based indexing
+  art.innerHTML += `<!-- ROW #${i}-->`
   for (var j = 1; j <= DIMENSIONS_UPPER_LIMIT; j++) {
     art.innerHTML += cellTemplate(i, j);
   }
@@ -55,12 +56,6 @@ const TARGET_CELL = document.getElementById(
 );
 console.log(`Target cell located at ${JSON.stringify(TARGET_CELL_CORDS)}`);
 console.log(cellAt(TARGET_CELL_CORDS[0], TARGET_CELL_CORDS[1]));
-
-// TODO REMOVE
-// TEMP DEBUG:
-// Make target cell red
-// red 100%, blue 0%
-TARGET_CELL.style.backgroundColor = `rgb(255,0,0)`;
 
 // Max gradient distance should be 1/n grid size
 const RENDER_DISTANCE = DIMENSIONS_UPPER_LIMIT;
@@ -87,6 +82,10 @@ for (var i = 1; i <= DIMENSIONS_UPPER_LIMIT; i++) {
       var percentR = 255 - percentB;
       document.getElementById(cellAt(i, j)).style.backgroundColor = `rgb(${percentR}, 0, ${percentB})`;
     }
-
   }
 }
+
+// Format Target Cell
+TARGET_CELL.style.backgroundColor = `transparent`;
+TARGET_CELL.innerHTML += `<!-- THIS IS THE TARGET CELL -->`;
+TARGET_CELL.innerHTML += `<div class="labeled-art" style="width: 100%; height: 100%; background-size: 50%; transform: rotate(180deg)"></div>`

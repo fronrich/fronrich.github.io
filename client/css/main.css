@@ -54,7 +54,7 @@ p {
 
 .labeled-art {
   background-image: url("../assets/png-images/art-background.png");
-  background-size: 25%;
+  background-size: 20%;
   background-position: 15% 15%;
 }
 
@@ -87,22 +87,27 @@ p {
   font-family: var(--font-sub-title);
   font-size: 5vw;
 }
+
 .text-menu {
   font-family: var(--font-menu);
 }
+
 .text-box {
   font-family: var(--font-text);
   font-size: 20px;
   text-overflow: ellipsis;
 }
+
 .caption {
   font-family: var(--font-menu);
   text-align: center;
   font-size: 16px;
 }
+
 .text-gold {
   color: var(--pale-yellow);
 }
+
 .self-gold {
   background-color: var(--pale-yellow);
 }
@@ -141,7 +146,6 @@ p {
     padding-top: 8vh;
   }
 
-
   /* SITE SECTIONS */
   /* menu */
   #menu {
@@ -157,20 +161,22 @@ p {
     flex-direction: row;
     justify-content: center;
   }
+
   #page-left {
     flex-basis: var(--border);
   }
+
   #page-center {
     flex-basis: var(--snug);
     flex-direction: column;
     justify-content: center;
   }
+
   #page-right {
     flex-basis: var(--border);
   }
 
   /* SITE ELEMENTS */
-
   /* texture mask */
   #mask {
     top: 0px;
@@ -213,6 +219,12 @@ p {
       'text text text';
   }
 
+  /* CELL FORMATS */
+  .section-subheader {
+    grid-template-areas:
+      'header text';
+  }
+
   .cell-header {
     grid-area: header;
     align-items: flex-end;
@@ -247,15 +259,8 @@ p {
     height: auto;
   }
 
-  #gallery-interactive-header {
-    grid-template-areas:
-      'header text';
-  }
-
   /* HOT AND COLD */
-
   #interactive-1 {
-
     grid-template-areas:
       'image'
       'text';
@@ -277,10 +282,11 @@ p {
     /* background-color: yellow; */
     display: block;
     opacity: 0;
-    transition: 1000ms;
-    transition-timing-function: cubic-bezier(0.01, 1.35, 0.96, 3);
+    transition: 50000ms;
+    transition-timing-function: cubic-bezier(0, 2, 0, 1);
     transition-property: opacity;
   }
+
   .hc-cell:hover {
     opacity: 1;
   }
@@ -289,6 +295,11 @@ p {
     background-color: #7FFEFE;
   }
 
+  /* STATIC GALLERY */
+  #gallery-static {
+    grid-template-areas:
+      'a' 'b' 'c' 'd';
+  }
 }
 
 /* ANIMATIONS */

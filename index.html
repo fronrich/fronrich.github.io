@@ -28,19 +28,7 @@
   <!-- subsections are partitions of these sections -->
   <div id="menu" class="wide fixed flex text-menu text-gold">
     <div id="menu-items" class="chain-horizontal snug">
-      <!-- Displays name of current page -->
-      <!-- <a id="home-button" class="button button-main" href="#home">
-        <span>Home</span>
-      </a>
-      <a id="info-button" class="button" href="#info">
-        <span>Introduction</span>
-      </a>
-      <a id="gallery-button" class="button" href="#gallery">
-        <span>Art Gallery</span>
-      </a>
-      <a id="music-button" class="button" href="#music">
-        <span>Musical Anthology</span>
-      </a> -->
+      <!-- JAVASCRIPT WILL INSERT MENU ITEMS HERE -->
     </div>
   </div>
   <section id="page-body" class="flex">
@@ -122,7 +110,8 @@
         </div>
         <!-- Interactive Art -->
         <section id="gallery-interactive">
-          <section id="gallery-interactive-header" class="grid">
+          <!-- INTERACTIVE HEADER -->
+          <section id="interactive-header" class="section-subheader grid">
             <div class="cell-header grid-cell flex title-med">
               <span>Interactive Exhibit</span>
             </div>
@@ -135,13 +124,11 @@
               </p>
             </div>
           </section>
+          <!-- INTERACTIVE EXHIBIT -->
           <section id="interactive-1" class="grid">
-            <div class="cell-header grid-cell flex title-med">
-
-            </div>
             <div class="cell-text grid-cell text-box">
               <span>
-                Follow the gradient to find the mystery cell.
+                Hot and Cold - Follow the gradient to find the mystery cell.
                 The cell's location is randomized each time,
                 as well as the number of cells in this grid. You might be
                 asking yourself, "what gradient?" Well that's a really good
@@ -151,10 +138,42 @@
             <div class="cell-image grid-cell flex">
               <div id="interactive-art-1-container" class="labeled-art">
                 <div id="interactive-art-1">
-                  <!-- hopefully stuff goes in here -->
+                  <!-- JAVASCRIPT WILL INSERT CELLS HERE -->
                 </div>
               </div>
               <span id="hot-and-cold" class="caption text-gold">Hot and Cold - 2019</span>
+            </div>
+          </section>
+        </section>
+        <!-- static GALLERY -->
+        <section id="gallery-static">
+          <!-- STATIC HEADER -->
+          <section id="static-subheader" class="section-subheader grid">
+            <div class="cell-header grid-cell flex title-med">
+              <span>Static Exhibit</span>
+            </div>
+            <div class="cell-text grid-cell text-box">
+              <p>
+                While all the art on this website is my own, I felt like putting
+                some of it on display here. The art in this exhibit isn't
+                animated or anything, I just thought it looked cool enough to
+                put on the internet. I taught myself graphic design as a
+                creative outlet. Hopefully you enjoy looking at my art as much
+                as I enjoyed making it!
+              </p>
+            </div>
+          </section>
+          <!-- STATIC CONTENT -->
+          <!-- MORE COMPACT GALLERY WITH POP UP FOR CLOSER VIEWING -->
+          <section id="gallery-static" class="grid">
+            <div class="cell-image" style="grid-area='a'">
+              <img src="client/assets/png-images/imp-312.png">
+            </div>
+            <div class="cell-image" style="grid-area='b'">
+
+            </div>
+            <div class="cell-image" style="grid-area='c'">
+
             </div>
           </section>
         </section>
@@ -164,7 +183,11 @@
         <div id="music-title" class="section-title title-big text-gold">
           <span>MUSICAL ANTHOLOGY</span>
         </div>
-
+        <div class="song-covers-slideshow-container" class="flex snug">
+          <div id="song-covers-slideshow" class="slideshow" style="background-color:red; width:100%; height:10px">
+            <!-- FIXME -->
+          </div>
+        </div>
         <section id="grid-statement" class="grid">
           <div class="cell-header grid-cell flex title-med">
             <span>Personal Statement</span>
