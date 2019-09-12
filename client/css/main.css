@@ -297,9 +297,28 @@ p {
 
   /* STATIC GALLERY */
   #gallery-static {
-    grid-template-areas:
-      'a' 'b' 'c' 'd';
+    /* grid-gap: 0px;
+    grid-template-columns: auto auto auto; */
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
   }
+
+  #gallery-col {
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    padding: 0 4px;
+    flex-basis: auto;
+    flex-direction: column;
+  }
+
+  #gallery-item img{
+    display: block;
+    width: 100%;
+    padding: 4px;
+  }
+
 }
 
 /* ANIMATIONS */
